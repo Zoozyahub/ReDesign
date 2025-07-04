@@ -1,0 +1,215 @@
+/* Основные настройки шапки */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.03);
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.08); */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.15);
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .header.scrolled {
+    height: 70px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  }
+  
+  .header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  /* Стили для логотипа */
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    background: linear-gradient(135deg, #8a2387 0%, #e94057 50%, #f27121 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .logo:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Стили для основной навигации */
+  .main-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menu-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+  }
+  
+  .menu-item {
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+  }
+  
+  .menu-text {
+    color: #c5c1bea6;
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+  
+  .menu-item:hover .menu-text {
+    color: #f27121;
+  }
+  
+  .menu-item.active .menu-text {
+    color: #e9406a;
+  }
+  
+  .underline {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(135deg, #8a2387 0%, #e94057 50%, #f27121 100%);
+    border-radius: 10px;
+    transform-origin: left;
+    animation: slideIn 0.3s ease-out forwards;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: scaleX(0);
+      opacity: 0;
+    }
+    to {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+  }
+  
+  /* Стили для авторизации */
+  .auth-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .login-button {
+    padding: 8px 20px;
+    background: linear-gradient(135deg, #8a2387 0%, #e94057 50%, #f27121 100%);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  }
+  
+  .login-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+  }
+  
+  .profile-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(31, 38, 135, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .profile-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+  }
+  
+  .profile-text {
+    color: #f27121a6;
+    font-weight: 500;
+  }
+  
+  .profile-icon {
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #8a2387 0%, #e94057 50%, #f27121 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+  }
+  
+  .profile-button:hover .avatar {
+    transform: scale(1.1);
+  }
+  
+  /* Анимация при загрузке страницы */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .header {
+    animation: fadeInDown 0.5s ease-out forwards;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    .menu-items {
+      gap: 10px;
+    }
+    
+    .menu-item {
+      padding: 8px 10px;
+    }
+    
+    .login-button, .profile-button {
+      padding: 6px 15px;
+    }
+  }

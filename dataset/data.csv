@@ -1,0 +1,25 @@
+﻿id_furniture;image;name;description;type;price;url;parnter_id
+1;images\train_0.png;Серое кресло;без описания;armchair;1200;/home;1
+1;images\train_1.png;Серое кресло;без описания;armchair;1200;/home;1
+1;images\train_2.png;Серое кресло;без описания;armchair;1200;/home;1
+2;images\train_3.png;Кожанное крсло;без описания;armchair;1500;/home;1
+2;images\train_4.png;Кожанное крсло;без описания;armchair;1500;/home;1
+2;images\train_5.png;Кожанное крсло;без описания;armchair;1500;/home;1
+3;images\train_54.png;Цветное кресло;без описания;armchair;2100;/home;1
+3;images\train_55.png;Цветное кресло;без описания;armchair;2100;/home;1
+3;images\train_56.png;Цветное кресло;без описания;armchair;2100;/home;1
+4;images\train_1341.png;"Жёлтое крсло";без описания;armchair;3000;/home;1
+4;images\train_1342.png;Жёлтое крсло;без описания;armchair;3000;/home;1
+4;images\train_1343.png;Жёлтое крсло;без описания;armchair;3000;/home;1
+5;images\train_353.png;Чёрный небольшой диван;без описания;couch;12000;/home;1
+5;images\train_354.png;Чёрный небольшой диван;без описания;couch;12000;/home;1
+5;images\train_355.png;Чёрный небольшой диван;без описания;couch;12000;/home;1
+6;images\train_398.png;Белый небольшой диван;без описания;couch;12000;/home;1
+6;images\train_399.png;Белый небольшой диван;без описания;couch;12000;/home;1
+6;images\train_400.png;Белый небольшой диван;без описания;couch;12000;/home;1
+7;images\train_508.png;Маленький деревянный столик;без описания;table;3500;/home;1
+7;images\train_509.png;Маленький деревянный столик;без описания;table;3500;/home;1
+7;images\train_510.png;Маленький деревянный столик;без описания;table;3500;/home;1
+8;images\hoff_1.png;Кровать с подъёмным механизмом Victori цвет тёмно-серый 160х200 см;"Victori — кровать удобна и элегантна. Ее каркас выполнен из прочной и долговечной ДСП, обивка — из мягкого бархатистого велюра. Привлекает внимание высокая мягкая спинка в изголовье: прострочка в виде диагональных линий, образующих в центре буквы V, выглядит оригинально и эффектно.";bed;23999;https://hoff.ru/catalog/spalnya/krovati/krovati_s_podemnym_mehanizmom/krovat_s_podyemnym_mekhanizmom_victori_id10408649/?articul=80642640;2
+9;images\hoff_2.png;"Каркас кровати Глазго цвет таксония, металл бруклин";"Двуспальная кровать Глазго отлично подойдет для спальни, выполненной в современном стиле. Модель отличается высокой комфортностью и оригинальным исполнением. В ее дизайне сочетаются различные цвета и фактуры. Мягкое стеганое изголовье обито серой искусственной кожей, приятной на ощупь и устойчивой к истиранию.";bed;10999;https://hoff.ru/catalog/spalnya/krovati/krovati_bez_podemnogo_mehanizma/karkas_krovati_glazgo_id8282207/?articul=80500498;2
+10;images\hoff_3.png;"Кровать Хелен цвет дуб крафт золотой, серый графит 160х200 см";без описания;bed;11999;https://hoff.ru/catalog/spalnya/krovati/krovati_bez_podemnogo_mehanizma/krovat_khelen_id10063049/?articul=80621558;2

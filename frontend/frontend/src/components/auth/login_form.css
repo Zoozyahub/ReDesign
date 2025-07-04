@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Form Container */
+.form-container {
+  margin-top: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh; /* Минимальная высота */
+  min-width: 21vw; /* Ширина равна 100% высоты экрана для ПК */
+  padding: 20px;
+  /* background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); */
+  box-sizing: border-box; /* Учитываем padding в ширине */
+}
+
+/* Адаптивность для маленьких экранов (например, телефонов) */
+@media (max-width: 700px) {
+  .form-container {
+    width: 100%; /* Ширина становится 100% для маленьких экранов */
+    padding: 0px; /* Уменьшаем padding для маленьких экранов */
+  }
+}
+
+.form-wrapper {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Glass Card Styling */
+.glass-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.36);
+  transition: transform 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Decorative circles */
+.decorative-circle {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  filter: blur(30px);
+  opacity: 0.2;
+  animation: float 6s ease-in-out infinite;
+}
+
+.decorative-circle.purple {
+  background-color: purple;
+  top: -80px;
+  right: -80px;
+}
+
+.decorative-circle.blue {
+  background-color: purple;
+  bottom: -80px;
+  left: -80px;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Form Title */
+.form-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Form Fields */
+.form-field {
+  margin-bottom: 24px;
+}
+
+.field-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #cccccc;
+  margin-bottom: 8px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999999;
+  pointer-events: none;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 12px 12px 36px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+}
+
+/* Password Toggle Button */
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #999999;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+  color: white;
+}
+
+/* Dropdown Styling */
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dropdown-button i {
+  transition: transform 0.3s ease;
+}
+
+.dropdown-button i.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  width: 100%;
+  margin-top: 4px;
+  background: rgba(31, 41, 55, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(75, 85, 99, 0.7);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.dropdown-items {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(75, 85, 99, 0.5);
+}
+
+.dropdown-item i {
+  margin-right: 12px;
+}
+
+.dropdown-item .icon-purple { color: #a78bfa; }
+.dropdown-item .icon-blue { color: #93c5fd; }
+.dropdown-item .icon-green { color: #6ee7b7; }
+.dropdown-item .icon-yellow { color: #fde68a; }
+.dropdown-item .icon-red { color: #fca5a5; }
+
+/* Submit Button */
+.submit-button {
+  width: 100%;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #8a2387 0%, #e94057 50%, #f27121 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.submit-button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+/* Form Footer */
+.form-footer {
+  margin-top: 24px;
+  text-align: center;
+  color: #cccccc;
+  font-size: 14px;
+}
+
+.sign-in-link {
+  color: #a78bfa;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sign-in-link:hover {
+  color: #c4b5fd;
+}
+
+/* Error Messages */
+.error-message {
+  color: #f87171;
+  font-size: 12px;
+  margin-top: 4px;
+}

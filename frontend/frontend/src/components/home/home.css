@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* Base Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Home Container */
+.home-container {
+  margin-top: 4vh;
+  width: 100%;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism Background */
+.home-glass-background {
+  position: relative;
+  padding: 40px 5% 80px;
+  overflow: hidden;
+}
+
+/* Decorative circles */
+.home-decorative-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.circle-1 {
+  background: linear-gradient(135deg, #8a2387 0%, #e94057 100%);
+  width: 500px;
+  height: 500px;
+  top: -150px;
+  right: -100px;
+  animation: float-slow 15s ease-in-out infinite;
+}
+
+.circle-2 {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  width: 600px;
+  height: 600px;
+  bottom: 10%;
+  left: -200px;
+  animation: float-slow 18s ease-in-out infinite reverse;
+}
+
+.circle-3 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  width: 400px;
+  height: 400px;
+  bottom: 5%;
+  right: 10%;
+  animation: float-slow 12s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-20px, 20px);
+  }
+  50% {
+    transform: translate(10px, -15px);
+  }
+  75% {
+    transform: translate(15px, 10px);
+  }
+}
+
+/* Hero Section */
+.home-hero-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+/* Headline */
+.home-headline {
+  font-family: 'Akzidenz-Grotesk-pro', 'Arial', sans-serif; /* Fallback if Akzidenz isn't available */
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 60px;
+  background: linear-gradient(90deg, #ffffff, #a78bfa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-shift 8s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Image Container */
+.home-image-container {
+  width: 100%;
+  margin: 40px auto 60px;
+  padding: 20px;
+}
+
+.home-image-frame {
+  position: relative;
+  width: 100%;
+  max-width: 1232px;
+  margin: 0 auto;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.home-image-placeholder {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.home-showcase-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+
+.home-image-frame:hover .home-showcase-image {
+  transform: scale(1.02);
+}
+
+/* Features Section */
+.home-features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 60px 0;
+}
+
+.home-feature-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 380px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.home-feature-icon {
+  font-size: 34px;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, rgba(138, 35, 135, 0.2) 0%, rgba(233, 64, 87, 0.2) 100%);
+  border-radius: 50%;
+  color: #e94057;
+}
+
+.home-feature-card h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.home-feature-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #cccccc;
+  text-align: center;
+}
+
+/* CTA Button */
+.home-cta-container {
+  display: flex;
+  justify-content: center;
+  margin: 60px 0;
+}
+
+.home-cta-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #8a2387 0%, #e94057 50%, #f27121 100%);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(233, 64, 87, 0.3);
+}
+
+.home-cta-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(233, 64, 87, 0.4);
+}
+
+.home-cta-icon {
+  margin-left: 12px;
+  transition: transform 0.3s ease;
+}
+
+.home-cta-button:hover .home-cta-icon {
+  transform: translateX(5px);
+}
+
+/* Testimonial Section */
+.home-testimonial-section {
+  margin: 80px auto;
+  max-width: 900px;
+}
+
+.home-testimonial-card {
+  position: relative;
+  padding: 60px 40px 40px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.home-quote-mark {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 120px;
+  font-family: Georgia, serif;
+  color: rgba(255, 255, 255, 0.1);
+  line-height: 0;
+}
+
+.home-testimonial-text {
+  font-size: 22px;
+  line-height: 1.6;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.home-testimonial-author {
+  text-align: right;
+  font-size: 18px;
+  font-weight: 500;
+  color: #a78bfa;
+}
+
+/* How It Works Section */
+.home-how-it-works {
+  margin: 100px auto;
+  max-width: 1200px;
+}
+
+.home-section-title {
+  font-family: 'Akzidenz-Grotesk', 'Arial', sans-serif;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.home-steps-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.home-step {
+  flex: 1;
+  min-width: 280px;
+  max-width: 350px;
+  padding: 40px 30px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.home-step:hover {
+  transform: translateY(-10px);
+}
+
+.home-step-number {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8a2387 0%, #e94057 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.home-step h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.home-step p {
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+/* Final CTA Section */
+.home-cta-final {
+  text-align: center;
+  margin: 80px auto;
+  max-width: 800px;
+  padding: 60px 40px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.home-cta-final h2 {
+  font-family: 'Akzidenz-Grotesk', 'Arial', sans-serif;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .home-headline {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .home-headline {
+    font-size: 32px;
+  }
+  
+  .home-feature-card,
+  .home-step {
+    min-width: 250px;
+  }
+  
+  .home-testimonial-text {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-headline {
+    font-size: 28px;
+  }
+  
+  .home-glass-background {
+    padding: 20px 15px 60px;
+  }
+  
+  .home-feature-card,
+  .home-step {
+    min-width: 100%;
+  }
+  
+  .home-cta-button {
+    padding: 14px 30px;
+    font-size: 16px;
+  }
+  
+  .home-testimonial-card {
+    padding: 50px 20px 30px;
+  }
+  
+  .home-testimonial-text {
+    font-size: 16px;
+  }
+  
+  .home-section-title {
+    font-size: 28px;
+  }
+}
